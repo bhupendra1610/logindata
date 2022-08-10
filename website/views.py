@@ -30,4 +30,7 @@ def logout(request):
         l.save()
     
     l= Logform.objects.all()
-    return render( request, 'logout.html',{'l':l})
+    data = {
+        'l':l
+    }
+    return render( request, 'logout.html',data)

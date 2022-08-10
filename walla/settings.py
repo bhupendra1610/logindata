@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-bcf0jxna_n42%9k!pja=*997^ehb4vs-o2u$q@_xigsd_c6@_a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['logindata16.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'website'
+    'website.apps.WebsiteConfig'
 ]
 
 MIDDLEWARE = [
