@@ -1,1 +1,1 @@
-web:gunicorn walla.wsgi
+web gunicorn walla.wsgi:application --log-file -
