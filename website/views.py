@@ -9,8 +9,11 @@ def home(request):
     return render( request, 'home.html')
 
 def login(request):
-    
-    return render( request, 'login.html')
+    l= Logform.objects.all()
+    data = {
+        'l':l
+    }
+    return render( request, 'login.html',data)
 
     
 def logout(request):
@@ -29,8 +32,5 @@ def logout(request):
         l.password =password
         l.save()
     
-    l= Logform.objects.all()
-    data = {
-        'l':l
-    }
-    return render( request, 'logout.html',data)
+   
+    return render( request, 'logout.html')

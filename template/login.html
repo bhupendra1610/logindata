@@ -68,6 +68,41 @@
         </div>
     </div>
 </div>
+<div style="overflow-x:auto;">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+     
+              <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col-lg-2 col-md-2 col-sm-1">S.NO</th>
+                      <th scope="col-lg-2 col-md-2 col-sm-1">First</th>
+                      <th scope="col-lg-2 col-md-2 col-sm-1">Last</th>
+                      <th scope="col-lg-2 col-md-2 col-sm-1">Addres</th>
+                      <th scope="col-lg-2 col-md-2 col-sm-1">Phoneno</th>
+                      <th scope="col-lg-2 col-md-2 col-sm-1">Password</th>
+                      <!-- <th scope="col">Handle</th> -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                      {%for p in l%}
+                    <tr>
+                      <th scope="row">{{forloop.counter}}</th>
+                      <td>{{p.firstname}}</td>
+                      <td>{{p.lastname}}</td>
+                      <td>{{p.address}}</td>
+                      <td>{{p.phoneno}}</td>
+                      <td>{{p.password}}</td>
+                  </tr>
+                {%endfor%}
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+</div>
+</div>
   
   </body>
 </html>
