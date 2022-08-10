@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Logform
+from .models import checklog
 
 # Create your views here.
 def base( request):
@@ -16,7 +16,7 @@ def login(request):
         phoneno= request.POST.get('phoneno')
         password = request.POST.get('password')
         
-        l =Logform()
+        l =checklog()
         l.firstname = firstname
         l.lastname = lastname
         l.address =address
@@ -29,7 +29,7 @@ def login(request):
     
 def logout(request):
     
-    l= Logform.objects.all()
+    l= checklog.objects.all()
     data = {
         'l':l
     }

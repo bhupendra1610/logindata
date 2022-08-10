@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Logform
+from .models import checklog
 
 # Register your models here.
-admin.site.register(Logform)
+admin.site.register(checklog)
