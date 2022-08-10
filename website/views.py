@@ -9,11 +9,6 @@ def home(request):
     return render( request, 'home.html')
 
 def login(request):
-    
-    return render( request, 'login.html')
-
-    
-def logout(request):
     if request.method == "POST":
         firstname = request.POST.get('firstname')
         lastname = request.POST.get('lastname')
@@ -28,6 +23,12 @@ def logout(request):
         l.phoneno = phoneno
         l.password =password
         l.save()
+    
+    return render( request, 'login.html')
+
+    
+def logout(request):
+    
     l= Logform.objects.all()
     data = {
         'l':l
